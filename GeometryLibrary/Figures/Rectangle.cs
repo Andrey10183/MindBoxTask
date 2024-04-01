@@ -8,8 +8,8 @@ public class Rectangle : Shape
     private readonly double _sideA;
     private readonly double _sideB;
 
-    public double SideA { get; }
-    public double SideB { get; }
+    public double SideA { get { return _sideA; } }
+    public double SideB { get { return _sideB; } }
 
     public Rectangle(double sideA, double sideB)
     {

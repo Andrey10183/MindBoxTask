@@ -3,11 +3,14 @@ using GeometryLibrary.Extensions;
 
 namespace GeometryLibrary.Figures;
 
+/// <summary>
+/// Provide methods for calculating geometric parameters of a Circle
+/// </summary>
 public class Circle : Shape
 {
     private readonly double _radius;
 
-    public double Radius { get; }
+    public double Radius { get { return _radius; } }
     public double Diameter { get { return 2 * _radius; } }
 
     public Circle(double radius)

@@ -7,9 +7,9 @@ public class Triangle : Shape
 {
     private readonly double[] _sides = new double[3];
 
-    public double SideA { get; }
-    public double SideB { get; }
-    public double SideC { get; }
+    public double SideA { get { return _sides[0]; } }
+    public double SideB { get { return _sides[1]; } }
+    public double SideC { get { return _sides[2]; } }
 
     public Triangle(
         double sideA,
@@ -44,7 +44,7 @@ public class Triangle : Shape
 
     public override double Perimeter()
     {
-        var result = _sides[0] + _sides[1] + _sides[2];
+        var result = _sides.Sum();
 
         if (result.IsOverflow())
         {
